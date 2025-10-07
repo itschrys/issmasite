@@ -55,14 +55,14 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="glass-effect p-8 rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+              className="glass-effect p-8 rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl">
+                <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 text-cyan-300">{item.title}</h3>
+                  <h3 className="text-2xl font-bold mb-2 text-green-300">{item.title}</h3>
                   <p className="text-gray-300">{item.description}</p>
                 </div>
               </div>

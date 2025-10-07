@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Shield className="w-6 h-6 text-cyan-400" />
-            <span className="font-bold text-lg">ISSMA⛑️🏥♻️</span>
+            <Shield className="w-6 h-6 text-green-400" />
+            <span className="font-bold text-lg">ISSMA⛑️</span>
           </div>
           
           <p className="text-gray-400 text-center">

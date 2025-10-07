@@ -59,7 +59,7 @@ const Courses = () => {
 
   return (
     <section id="cursos" className="py-20 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/10 to-transparent" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -86,7 +86,7 @@ const Courses = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="glass-effect rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300"
+              className="glass-effect rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -97,7 +97,7 @@ const Courses = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-cyan-300">{course.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-green-300">{course.title}</h3>
                 <p className="text-gray-300 mb-4">{course.description}</p>
                 
                 <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
@@ -113,7 +113,7 @@ const Courses = () => {
 
                 <Button
                   onClick={handleCourseClick}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl"
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold rounded-xl"
                 >
                   <BookOpen className="mr-2 w-4 h-4" />
                   Saiba Mais

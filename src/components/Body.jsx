@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-green-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -35,7 +35,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
@@ -58,13 +58,13 @@ const Hero = () => {
           {/* Ícones superiores */}
           <div className="flex justify-center gap-4 mb-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="p-4 glass-effect rounded-2xl">
-              <Shield className="w-12 h-12 text-cyan-400" />
+              <Shield className="w-12 h-12 text-green-500" />
             </motion.div>
             <motion.div whileHover={{ scale: 1.1, rotate: -5 }} className="p-4 glass-effect rounded-2xl">
-              <GraduationCap className="w-12 h-12 text-blue-400" />
+              <GraduationCap className="w-12 h-12 text-green-400" />
             </motion.div>
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="p-4 glass-effect rounded-2xl">
-              <Award className="w-12 h-12 text-purple-400" />
+              <Award className="w-12 h-12 text-green-300" />
             </motion.div>
           </div>
 
@@ -91,7 +91,7 @@ const Hero = () => {
             <Button
               onClick={handleCoursesClick}
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105"
             >
               <GraduationCap className="mr-2 w-6 h-6" />
               Acessar Cursos

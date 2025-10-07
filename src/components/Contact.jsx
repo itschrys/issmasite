@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <section id="contato" className="py-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-900/10 to-transparent" />
       
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -64,7 +64,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="glass-effect p-10 rounded-3xl"
           >
-            <h3 className="text-3xl font-bold mb-6 text-cyan-300">Consultoria SSMA</h3>
+            <h3 className="text-3xl font-bold mb-6 text-green-400">Consultoria SSMA</h3>
             <p className="text-gray-300 mb-8 text-lg">
               Precisa de orientação especializada? Entre em contato via WhatsApp para agendar uma consultoria personalizada.
             </p>
@@ -86,11 +86,11 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="glass-effect p-10 rounded-3xl"
           >
-            <h3 className="text-3xl font-bold mb-6 text-purple-300">Informações de Contato</h3>
+            <h3 className="text-3xl font-bold mb-6 text-emerald-300">Informações de Contato</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg">
+                <div className="p-3 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
