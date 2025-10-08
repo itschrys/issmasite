@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, TrendingUp, Users, Target } from 'lucide-react';
+import fotoIsmael from '../images/foto_ismael.jpg'; 
 
 const About = () => {
   const highlights = [
@@ -79,7 +80,11 @@ const About = () => {
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-shrink-0">
-              <img className="w-48 h-60 rounded-2xl object-cover shadow-2xl" alt="Engenheiro SSMA profissional" src="fotos/foto ismael sem fundo.png" />
+              <img
+                className="w-48 h-60 rounded-2xl object-cover shadow-2xl"
+                alt="Engenheiro SSMA profissional"
+                src={fotoIsmael}
+              />
             </div>
             <div>
               <h3 className="text-3xl font-bold mb-4 text-gradient">Minha Missão</h3>
