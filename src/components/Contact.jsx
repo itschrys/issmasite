@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSocialClick = (platform) => {
     const socialLinks = {
-    //'LinkedIn': 'https://www.linkedin.com/in/seu-perfil',
+    'LinkedIn': 'https://www.linkedin.com/in/ismael-lins-34408b188',
     'Instagram': 'https://www.instagram.com/issma.sms?igsh=cjYwMTlncWUwNDN3',
     'Youtube': 'https://youtube.com/@issma-i4c?si=KZvTVuHfLDisQS-1'
   };
@@ -95,7 +95,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-white font-semibold">contato@engenheirossma.com</p>
+                  <p className="text-white font-semibold">issma.sms@gmail.com</p>
                 </div>
               </div>
 
