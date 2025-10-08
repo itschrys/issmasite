@@ -53,7 +53,7 @@ const Courses = () => {
   const handleCourseClick = () => {
     toast({
       title: "🚧 Esta funcionalidade ainda não está implementada",
-      description: "Mas não se preocupe! Você pode solicitá-la no seu próximo prompt! 🚀",
+      description: "Em breve você terá mais informações sobre os cursos🚀",
     });
   };
 
