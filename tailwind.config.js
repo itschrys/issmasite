@@ -10,13 +10,34 @@ module.exports = {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: { DEFAULT: '1rem', sm: '1.5rem', lg: '2rem' },
 			screens: {
-				'2xl': '1400px',
+				'2xl': '1200px',
 			},
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
+				// Verde segurança do trabalho, em tons sóbrios
+				brand: {
+					50: '#EEF7F2',
+					100: '#D5ECDF',
+					200: '#A9D8BE',
+					300: '#73BF97',
+					400: '#3FA571',
+					500: '#1E8A57',
+					600: '#166F46',
+					700: '#12583A',
+					800: '#0F4530',
+					900: '#0C3424',
+					950: '#07221A',
+				},
+				ink: '#0A1A14',
+				sand: '#F4F6F3',
+				hazard: '#E8B92E',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

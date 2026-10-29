@@ -2,19 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@layer base {
+  :root {
+    --background: 120 10% 96%;
+    --foreground: 155 40% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 40% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 40% 7%;
+    --primary: 151 64% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 30% 94%;
+    --secondary-foreground: 155 40% 12%;
+    --muted: 150 15% 92%;
+    --muted-foreground: 155 10% 38%;
+    --accent: 150 30% 94%;
+    --accent-foreground: 155 40% 12%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 12% 86%;
+    --input: 150 12% 86%;
+    --ring: 151 64% 33%;
+    --radius: 0.75rem;
+  }
 
-body {
-  @apply bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800 text-white;
-  font-family: 'Inter', sans-serif;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-sand text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-500 to-green-600;
+@layer components {
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
   }
-  
-  .glass-effect {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-500;
+  }
+
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-900/20 transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand-900/20 px-6 py-3.5 text-base font-semibold text-brand-800 transition hover:border-brand-500 hover:text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300;
+  }
+
+  .card {
+    @apply rounded-2xl border border-black/5 bg-white shadow-sm;
+  }
+
+  .card-dark {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04];
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .hazard-stripe {
+    background: repeating-linear-gradient(-45deg, #E8B92E 0 10px, #0A1A14 10px 20px);
   }
 }

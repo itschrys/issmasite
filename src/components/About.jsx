@@ -1,102 +1,78 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Briefcase, TrendingUp, Users, Target } from 'lucide-react';
-import fotoIsmael from '../images/foto_ismael.jpg'; 
+import fotoIsmael from '../images/foto_ismael.jpg';
+import Reveal from './Reveal';
 
 const About = () => {
   const highlights = [
     {
       icon: Briefcase,
-      title: "Experiência Sólida",
-      description: "Anos de atuação em projetos de SSMA em diversos setores industriais"
+      title: 'Experiência de campo',
+      description: 'Atuação em projetos de SSMA em diversos setores industriais.',
     },
     {
       icon: TrendingUp,
-      title: "Resultados Comprovados",
-      description: "Histórico de sucesso na implementação de programas de segurança"
+      title: 'Resultados reais',
+      description: 'Implantação de programas de segurança que reduzem riscos de verdade.',
     },
     {
       icon: Users,
-      title: "Formação de Profissionais",
-      description: "Centenas de alunos capacitados e certificados"
+      title: 'Formação de profissionais',
+      description: 'Alunos capacitados com linguagem direta e aplicada à rotina.',
     },
     {
       icon: Target,
-      title: "Foco em Excelência",
-      description: "Metodologia prática e orientada para resultados reais"
-    }
+      title: 'Foco em excelência',
+      description: 'Metodologia prática, orientada para o que o mercado exige.',
+    },
   ];
 
   return (
-    <section id="sobre" className="py-20 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent" />
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Sobre Minha <span className="text-gradient">Carreira</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Dedicado a promover ambientes de trabalho mais seguros e sustentáveis através da educação e consultoria especializada
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="glass-effect p-8 rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2 text-green-300">{item.title}</h3>
-                  <p className="text-gray-300">{item.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="glass-effect p-10 rounded-3xl"
-        >
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-shrink-0">
-              <img
-                className="w-48 h-60 rounded-2xl object-cover shadow-2xl"
-                alt="Engenheiro SSMA profissional"
-                src={fotoIsmael}
-              />
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold mb-4 text-gradient">Minha Missão</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Capacitar profissionais e organizações com conhecimento técnico de excelência em SSMA, 
-                promovendo uma cultura de segurança, saúde e responsabilidade ambiental. Através de 
-                cursos práticos e consultoria personalizada, busco transformar ambientes de trabalho 
-                em espaços mais seguros, saudáveis e sustentáveis.
-              </p>
-            </div>
+    <section id="sobre" className="section bg-sand">
+      <div className="container grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <Reveal className="relative mx-auto w-full max-w-md">
+          <div className="absolute -left-3 -top-3 h-full w-full rounded-3xl border-2 border-brand-500/30" />
+          <img
+            src={fotoIsmael}
+            alt="Ismael Lins, especialista em SSMA"
+            loading="lazy"
+            className="relative aspect-[4/5] w-full rounded-3xl bg-white object-cover object-top shadow-xl"
+          />
+          <div className="absolute -bottom-5 right-4 rounded-2xl bg-ink px-5 py-4 text-white shadow-xl">
+            <p className="font-display text-lg font-bold">Ismael Lins</p>
+            <p className="text-sm text-brand-300">Especialista em SSMA</p>
           </div>
-        </motion.div>
+        </Reveal>
+
+        <div>
+          <Reveal>
+            <span className="eyebrow">Quem está por trás do ISSMA</span>
+            <h2 className="section-title mt-3">
+              Segurança do trabalho ensinada por quem vive o <span className="text-brand-500">dia a dia de campo</span>.
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink/70">
+              O ISSMA nasceu para capacitar profissionais e organizações com conhecimento técnico de excelência em
+              Segurança, Saúde e Meio Ambiente. Através de cursos práticos, ferramentas e consultoria personalizada, a
+              missão é transformar ambientes de trabalho em espaços mais seguros, saudáveis e sustentáveis.
+            </p>
+          </Reveal>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {highlights.map(({ icon: Icon, title, description }, i) => (
+              <Reveal key={title} delay={i * 0.05} className="card p-5">
+                <div className="flex items-start gap-4">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold">{title}</h3>
+                    <p className="mt-1 text-sm text-ink/65">{description}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

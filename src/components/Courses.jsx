@@ -1,141 +1,106 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, Award, Clock, Users } from 'lucide-react';
-import { Button } from './ui/button';
-import { toast } from './ui/use-toast';
+import {
+  HardHat, Container, Zap, Leaf, HeartPulse, Flame,
+  CheckCircle2, ShoppingCart, ShieldCheck, MonitorPlay, Award, Infinity as InfinityIcon,
+} from 'lucide-react';
+import Reveal from './Reveal';
+import PriceTag from './PriceTag';
+import { HOTMART_CURSO_URL, PRECO_CURSO } from '../data/site';
+import { openExternal } from '../lib/links';
 
 const Courses = () => {
-  const courses = [
-    {
-      title: "NR-35 - Trabalho em Altura",
-      description: "Capacitação completa para trabalhos em altura com segurança",
-      duration: "8 horas",
-      students: "500+",
-      image: "Treinamento de segurança em trabalho em altura com equipamentos"
-    },
-    {
-      title: "NR-33 - Espaços Confinados",
-      description: "Formação especializada em segurança para espaços confinados",
-      duration: "16 horas",
-      students: "350+",
-      image: "Treinamento profissional em espaços confinados com EPIs"
-    },
-    {
-      title: "NR-10 - Segurança em Eletricidade",
-      description: "Curso completo de segurança em instalações elétricas",
-      duration: "40 horas",
-      students: "600+",
-      image: "Eletricista profissional trabalhando com segurança em painel elétrico"
-    },
-    {
-      title: "Gestão Ambiental",
-      description: "Práticas sustentáveis e gestão de resíduos industriais",
-      duration: "24 horas",
-      students: "280+",
-      image: "Profissional realizando gestão ambiental em indústria"
-    },
-    {
-      title: "Primeiros Socorros",
-      description: "Atendimento emergencial e suporte básico de vida",
-      duration: "12 horas",
-      students: "450+",
-      image: "Treinamento de primeiros socorros em ambiente corporativo"
-    },
-    {
-      title: "Prevenção de Incêndios",
-      description: "Combate a incêndio e uso de equipamentos de segurança",
-      duration: "8 horas",
-      students: "520+",
-      image: "Treinamento de combate a incêndio com extintores"
-    }
+  const topics = [
+    { icon: HardHat, title: 'NR-35 · Trabalho em Altura', description: 'Planejamento, sistemas de proteção contra quedas e resgate.' },
+    { icon: Container, title: 'NR-33 · Espaços Confinados', description: 'Reconhecimento de riscos, permissão de entrada e monitoramento.' },
+    { icon: Zap, title: 'NR-10 · Segurança em Eletricidade', description: 'Medidas de controle, bloqueio e trabalho seguro em instalações.' },
+    { icon: Leaf, title: 'Gestão Ambiental', description: 'Práticas sustentáveis e gestão de resíduos industriais.' },
+    { icon: HeartPulse, title: 'Primeiros Socorros', description: 'Atendimento emergencial e suporte básico de vida.' },
+    { icon: Flame, title: 'Prevenção e Combate a Incêndio', description: 'Classes de fogo, extintores e plano de emergência.' },
   ];
 
-  const handleCourseClick = () => {
-    toast({
-      title: "🚧 Esta funcionalidade ainda não está implementada",
-      description: "Em breve você terá mais informações sobre os cursos🚀",
-    });
-  };
+  const audience = [
+    'Técnicos e estudantes de Segurança do Trabalho',
+    'Profissionais que precisam se atualizar nas NRs',
+    'Empresas que querem capacitar suas equipes',
+    'Quem quer ministrar treinamentos com mais confiança',
+  ];
+
+  const perks = [
+    { icon: MonitorPlay, label: 'Aulas online, no seu ritmo' },
+    { icon: Award, label: 'Certificado de conclusão' },
+    { icon: InfinityIcon, label: 'Acesso pela plataforma Hotmart' },
+    { icon: ShieldCheck, label: 'Compra segura com garantia' },
+  ];
 
   return (
-    <section id="cursos" className="py-20 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/10 to-transparent" />
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Nossos <span className="text-gradient">Cursos</span>
+    <section id="cursos" className="section bg-white">
+      <div className="container">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <span className="eyebrow">Cursos ISSMA</span>
+          <h2 className="section-title mt-3">
+            Conteúdo direto ao ponto, do jeito que se aplica <span className="text-brand-500">em campo</span>.
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Certificações reconhecidas e treinamentos práticos para sua evolução profissional
+          <p className="mt-5 text-lg text-ink/65">
+            Aprenda as principais Normas Regulamentadoras com exemplos reais, materiais de apoio e uma didática pensada
+            para quem precisa colocar o conhecimento em prática.
           </p>
-        </motion.div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="glass-effect rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
-                  alt={course.title}
-                 src="https://images.unsplash.com/photo-1635251595512-dc52146d5ae8" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {topics.map(({ icon: Icon, title, description }, i) => (
+            <Reveal key={title} delay={i * 0.04} className="group card p-6 transition hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-lg">
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-500 text-white transition group-hover:bg-brand-600">
+                <Icon className="h-6 w-6" />
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-green-300">{course.title}</h3>
-                <p className="text-gray-300 mb-4">{course.description}</p>
-                
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{course.students}</span>
-                  </div>
-                </div>
-
-                <Button
-                  onClick={handleCourseClick}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold rounded-xl"
-                >
-                  <BookOpen className="mr-2 w-4 h-4" />
-                  Saiba Mais
-                </Button>
-              </div>
-            </motion.div>
+              <h3 className="mt-5 text-lg font-bold">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/65">{description}</p>
+            </Reveal>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="glass-effect p-8 rounded-3xl inline-block">
-            <Award className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Certificação Reconhecida</h3>
-            <p className="text-gray-300">Todos os cursos emitem certificado válido em todo território nacional</p>
+        <Reveal className="mt-14 overflow-hidden rounded-3xl bg-ink text-white">
+          <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-2 lg:p-14">
+            <div>
+              <span className="eyebrow-dark">Para quem é</span>
+              <h3 className="mt-3 text-2xl font-extrabold sm:text-3xl">
+                Feito para você que quer crescer na área de SST
+              </h3>
+              <ul className="mt-6 space-y-3">
+                {audience.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/80">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+              <ul className="grid gap-4 sm:grid-cols-2">
+                {perks.map(({ icon: Icon, label }) => (
+                  <li key={label} className="flex items-center gap-3 text-sm text-white/85">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-500/15 text-brand-300">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    {label}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10">
+                <PriceTag price={PRECO_CURSO} />
+              </div>
+              <div className="mt-6">
+                <button onClick={() => openExternal(HOTMART_CURSO_URL)} className="btn-primary w-full py-4 text-lg">
+                  <ShoppingCart className="h-5 w-5" />
+                  Quero me inscrever agora
+                </button>
+                <p className="mt-3 text-center text-xs text-white/50">
+                  Pagamento processado com segurança pela Hotmart · Cartão, Pix ou boleto
+                </p>
+              </div>
+            </div>
           </div>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );
