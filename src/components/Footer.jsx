@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="border-t border-white/10 bg-ink py-10 text-white">
     <div className="container flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
       <div className="flex flex-col items-center gap-3 md:flex-row">
-        <img src={logo} alt="Logotipo da ISSMA" loading="lazy" className="h-16 w-16 rounded-full" />
+        <img src={logo} alt="Logotipo da ISSMA" loading="lazy" className="h-16 w-16 rounded-full ring-1 ring-white/25" />
         <div>
           <p className="text-sm text-white/70">Instruções em Segurança, Saúde e Meio Ambiente</p>
           <p className="mt-1 text-sm text-white/50">ISSMA é de Salvador — Bahia.</p>

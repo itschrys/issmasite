@@ -38,7 +38,7 @@ const CertificateGenerator = () => {
               Ferramenta ISSMA
             </span>
             <h2 className="section-title mt-3">
-              Gerador de Certificados de <span className="text-brand-300">Treinamentos</span>
+              Gerador de Certificados de <span className="text-gold-400">Treinamentos</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-white/70">
               Facilita a emissão e a padronização de certificados, com conferência dos dados pelo responsável pelo
@@ -49,7 +49,7 @@ const CertificateGenerator = () => {
             <ul className="mt-8 space-y-3">
               {gains.map((g) => (
                 <li key={g} className="flex items-start gap-3 text-white/85">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-safety" />
                   {g}
                 </li>
               ))}
@@ -68,9 +68,9 @@ const CertificateGenerator = () => {
 
           {/* Mockup ilustrativo de certificado */}
           <Reveal delay={0.1} className="relative mx-auto w-full max-w-lg">
-            <div className="absolute -inset-4 rounded-[2rem] bg-brand-500/20 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[2rem] bg-gold-500/15 blur-2xl" />
             <div className="relative rotate-1 rounded-2xl bg-white p-2 text-ink shadow-2xl">
-              <div className="rounded-xl border-2 border-brand-500/40 p-5 sm:p-8">
+              <div className="rounded-xl border-2 border-gold-500/60 p-5 sm:p-8">
                 <div className="flex items-center justify-between">
                   <img src={logo} alt="" loading="lazy" className="h-12 w-12 rounded-full" />
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-ink/50">Modelo ilustrativo</span>
@@ -92,7 +92,7 @@ const CertificateGenerator = () => {
               </div>
             </div>
             <div className="absolute -bottom-5 -left-2 flex items-center gap-2 rounded-xl bg-ink px-4 py-3 text-sm shadow-xl sm:-left-6">
-              <FileCheck2 className="h-4 w-4 text-brand-300" />
+              <FileCheck2 className="h-4 w-4 text-gold-400" />
               Emissão padronizada
             </div>
           </Reveal>
@@ -101,7 +101,7 @@ const CertificateGenerator = () => {
         <div className="mt-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ icon: Icon, title, description }, i) => (
             <Reveal key={title} delay={i * 0.05} className="card-dark p-6">
-              <Icon className="h-6 w-6 text-brand-300" />
+              <Icon className="h-6 w-6 text-gold-400" />
               <h3 className="mt-4 font-bold">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/60">{description}</p>
             </Reveal>
@@ -113,7 +113,7 @@ const CertificateGenerator = () => {
           <ol className="mt-8 grid gap-4 md:grid-cols-3">
             {steps.map((s) => (
               <li key={s.n} className="flex gap-4 rounded-2xl border border-white/10 p-6">
-                <span className="font-display text-3xl font-extrabold text-brand-400">{s.n}</span>
+                <span className="font-display text-3xl font-extrabold text-gold-400">{s.n}</span>
                 <div>
                   <p className="font-bold">{s.title}</p>
                   <p className="mt-1 text-sm text-white/60">{s.text}</p>

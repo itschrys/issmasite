@@ -28,7 +28,7 @@ const Contact = () => {
 
         <Reveal delay={0.1} className="space-y-3">
           <a href={`mailto:${EMAIL}`} className="card-dark flex items-center gap-4 p-5 transition hover:bg-white/[0.07]">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-500/15 text-brand-300">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-500/15 text-gold-400">
               <Mail className="h-5 w-5" />
             </span>
             <span className="min-w-0">
@@ -37,7 +37,7 @@ const Contact = () => {
             </span>
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="card-dark flex items-center gap-4 p-5 transition hover:bg-white/[0.07]">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-500/15 text-brand-300">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold-500/15 text-gold-400">
               <Phone className="h-5 w-5" />
             </span>
             <span>
@@ -54,7 +54,7 @@ const Contact = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium transition hover:border-brand-300/50 hover:text-brand-300"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium transition hover:border-gold-400/50 hover:text-gold-400"
                 >
                   <Icon className="h-4 w-4" />
                   {name}

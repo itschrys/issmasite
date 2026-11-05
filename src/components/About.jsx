@@ -31,7 +31,7 @@ const About = () => {
     <section id="sobre" className="section bg-sand">
       <div className="container grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal className="relative mx-auto w-full max-w-md">
-          <div className="absolute -left-3 -top-3 h-full w-full rounded-3xl border-2 border-brand-500/30" />
+          <div className="absolute -left-3 -top-3 h-full w-full rounded-3xl border-2 border-gold-500/50" />
           <img
             src={fotoIsmael}
             alt="Ismael Lins, Técnico em Segurança do Trabalho e fundador da ISSMA"
@@ -40,7 +40,7 @@ const About = () => {
           />
           <div className="absolute -bottom-5 right-4 max-w-[17rem] rounded-2xl bg-ink px-5 py-4 text-white shadow-xl">
             <p className="font-display text-lg font-bold">Ismael Lins</p>
-            <p className="text-sm text-brand-300">Técnico em Segurança do Trabalho e fundador da ISSMA</p>
+            <p className="text-sm text-gold-400">Técnico em Segurança do Trabalho e fundador da ISSMA</p>
           </div>
         </Reveal>
 

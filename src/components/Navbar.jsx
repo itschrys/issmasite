@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <nav className="container flex h-16 items-center justify-between lg:h-20">
         <a href="#inicio" className="flex items-center gap-2.5 text-white" onClick={() => setOpen(false)}>
-          <img src={logo} alt="" className="h-11 w-11 rounded-full lg:h-14 lg:w-14" />
+          <img src={logo} alt="" className="h-11 w-11 rounded-full ring-1 ring-white/25 lg:h-14 lg:w-14" />
           <span className="font-display text-xl font-extrabold tracking-tight">ISSMA</span>
         </a>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <a
             href="#materiais"
-            className="hidden items-center gap-2 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-600 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-gold-400 sm:inline-flex"
           >
             <FolderOpen className="h-4 w-4" />
             Ver os kits

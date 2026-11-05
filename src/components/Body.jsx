@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative overflow-hidden bg-ink text-white">
       <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_75%)]" />
-      <div className="absolute -right-40 top-1/3 h-[32rem] w-[32rem] rounded-full bg-brand-500/20 blur-[120px]" />
+      <div className="absolute -right-40 top-1/3 h-[32rem] w-[32rem] rounded-full bg-gold-400/25 blur-[120px]" />
 
       <div className="container relative grid items-center gap-10 pt-28 lg:min-h-[100svh] lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 lg:pt-24">
         <motion.div
@@ -29,13 +29,13 @@ const Hero = () => {
             className="mx-auto mb-6 h-24 w-24 rounded-full shadow-xl ring-2 ring-white/15 lg:mx-0"
           />
 
-          <span className="eyebrow-dark rounded-full border border-brand-300/30 bg-brand-500/10 px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
+          <span className="eyebrow-dark rounded-full border border-gold-400/30 bg-gold-500/10 px-3 py-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
             Segurança · Saúde · Meio Ambiente
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
-            Conhecimento de campo para <span className="text-brand-300">fortalecer a prevenção</span>.
+            Conhecimento de campo para <span className="text-gold-400">fortalecer a prevenção</span>.
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-white/70 sm:text-lg lg:mx-0">
@@ -57,7 +57,7 @@ const Hero = () => {
           <ul className="mt-10 grid gap-3 text-sm text-white/70 sm:grid-cols-3">
             {badges.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center justify-center gap-2 lg:justify-start">
-                <Icon className="h-4 w-4 shrink-0 text-brand-300" />
+                <Icon className="h-4 w-4 shrink-0 text-gold-400" />
                 {label}
               </li>
             ))}
@@ -70,7 +70,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative mx-auto w-full max-w-sm self-end sm:max-w-md lg:max-w-none"
         >
-          <div className="absolute inset-x-6 bottom-0 top-16 rounded-t-[2.5rem] bg-gradient-to-b from-brand-500/40 to-brand-900/10 ring-1 ring-white/10" />
+          <div className="absolute inset-x-6 bottom-0 top-16 rounded-t-[2.5rem] bg-gradient-to-b from-brand-400/50 to-brand-800/10 ring-1 ring-white/10" />
           <img
             src={fotoSemFundo}
             alt="Ismael Lins, fundador da ISSMA, com capacete de segurança"

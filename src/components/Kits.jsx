@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         />
       ) : (
         <div className="grid aspect-[4/3] w-full place-items-center bg-gradient-to-br from-brand-700 to-brand-950 xl:aspect-[4/5]">
-          <Flame className="h-16 w-16 text-hazard" />
+          <Flame className="h-16 w-16 text-gold-500" />
         </div>
       )}
 
@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
           <ul className="mt-4 space-y-2.5">
             {itens.map((item) => (
               <li key={item} className="flex items-start gap-2 text-sm text-white/85">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-300" />
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-safety" />
                 {item}
               </li>
             ))}
@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
           </a>
           {garantiaDias && (
             <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-white/60">
-              <ShieldCheck className="h-3.5 w-3.5 text-brand-300" />
+              <ShieldCheck className="h-3.5 w-3.5 text-safety" />
               Garantia de {garantiaDias} dias pela Hotmart
             </p>
           )}

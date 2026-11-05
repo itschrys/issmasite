@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 120 10% 96%;
-    --foreground: 155 40% 7%;
+    --background: 218 30% 97%;
+    --foreground: 218 40% 7%;
     --card: 0 0% 100%;
-    --card-foreground: 155 40% 7%;
+    --card-foreground: 218 40% 7%;
     --popover: 0 0% 100%;
-    --popover-foreground: 155 40% 7%;
-    --primary: 151 64% 33%;
+    --popover-foreground: 218 40% 7%;
+    --primary: 218 60% 30%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 150 30% 94%;
-    --secondary-foreground: 155 40% 12%;
-    --muted: 150 15% 92%;
-    --muted-foreground: 155 10% 38%;
-    --accent: 150 30% 94%;
-    --accent-foreground: 155 40% 12%;
+    --secondary: 218 30% 94%;
+    --secondary-foreground: 218 40% 12%;
+    --muted: 218 15% 92%;
+    --muted-foreground: 218 10% 38%;
+    --accent: 218 30% 94%;
+    --accent-foreground: 218 40% 12%;
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
-    --border: 150 12% 86%;
-    --input: 150 12% 86%;
-    --ring: 151 64% 33%;
+    --border: 218 12% 86%;
+    --input: 218 12% 86%;
+    --ring: 218 60% 30%;
     --radius: 0.75rem;
   }
 
@@ -52,11 +52,11 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-500;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold-700;
   }
 
   .eyebrow-dark {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold-400;
   }
 
   .section-title {
@@ -64,7 +64,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-900/20 transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gold-500 px-6 py-3.5 text-base font-bold text-ink shadow-lg shadow-gold-500/20 transition hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-300 focus-visible:ring-offset-2 active:scale-[0.98];
   }
 
   .btn-outline-light {
@@ -91,6 +91,6 @@
   }
 
   .hazard-stripe {
-    background: repeating-linear-gradient(-45deg, #F5AE1B 0 10px, #0A1A14 10px 20px);
+    background: repeating-linear-gradient(-45deg, #F5AE1B 0 10px, #0F1F3D 10px 20px);
   }
 }
