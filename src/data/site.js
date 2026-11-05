@@ -17,6 +17,7 @@ export const SOCIAL = {
 
 // 👉 Produtos à venda. Sem "url", o botão vira "Consultar disponibilidade" no WhatsApp.
 // O percentual de desconto é calculado a partir de "de" e "por". Sem "por", o preço não aparece.
+// Atenção: não use links go.hotmart.com aqui. Bloqueadores de anúncios escondem esses botões.
 export const PRODUCTS = [
   {
     id: 'tudo-nr01',
@@ -29,7 +30,7 @@ export const PRODUCTS = [
       'Planilhas, checklists e ferramentas práticas',
     ],
     capa: capaTudoNr01,
-    url: 'https://go.hotmart.com/K107682435S',
+    url: 'https://hotmart.com/pt-br/marketplace/produtos/tudo-para-a-nr-01/K107682435S',
     de: 100,
     por: 29.9,
     garantiaDias: 7,
@@ -45,7 +46,7 @@ export const PRODUCTS = [
       'Modelos editáveis, e-book técnico e manual de utilização',
     ],
     capa: capaGestaoSst,
-    url: 'https://go.hotmart.com/B107775477J',
+    url: 'https://hotmart.com/pt-br/marketplace/produtos/material-para-iniciantes_tecnico-em-seguranca-do-trabalho/B107775477J',
     de: 100,
     por: 29.9,
     garantiaDias: 7,
@@ -69,7 +70,7 @@ export const PRODUCTS = [
     ],
     aviso: 'Material preparatório independente, com questões autorais. Não possui vínculo com Petrobras, Transpetro ou bancas organizadoras. A aprovação depende do desempenho do candidato.',
     capa: capaKitAprova,
-    url: 'https://go.hotmart.com/N107641379E',
+    url: 'https://hotmart.com/pt-br/marketplace/produtos/preparacao-para-concursos-de-seguranca-do-trabalho/N107641379E',
     de: 99,
     por: 29.9,
     garantiaDias: 7,
