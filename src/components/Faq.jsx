@@ -4,31 +4,39 @@ import Reveal from './Reveal';
 
 const faqs = [
   {
-    q: 'Como acesso o curso depois da compra?',
-    a: 'A compra é feita pela Hotmart. Assim que o pagamento é aprovado, você recebe no e-mail o acesso à área de membros, que funciona no celular e no computador.',
+    q: 'Isso é um curso em vídeo?',
+    a: 'Não. Os kits são materiais digitais para você usar nos seus treinamentos, na rotina de SST e nos estudos. Veja no card de cada produto o que está incluído.',
+  },
+  {
+    q: 'Como recebo o material depois da compra?',
+    a: 'A compra é feita pela Hotmart e, com o pagamento aprovado, o acesso ao material é liberado pela própria plataforma.',
+  },
+  {
+    q: 'Os kits têm garantia?',
+    a: 'Sim. A garantia de cada produto aparece no card e na página da Hotmart. Nos kits com preço informado acima, ela é de 7 dias, conforme as regras da Hotmart.',
   },
   {
     q: 'Quais formas de pagamento são aceitas?',
-    a: 'Cartão de crédito (inclusive parcelado), Pix e boleto, todos processados com segurança pela Hotmart.',
+    a: 'As opções disponíveis e as condições de parcelamento aparecem no checkout da Hotmart antes de você concluir a compra.',
   },
   {
-    q: 'O Gerador de Certificados serve para qualquer NR?',
-    a: 'Ele foi pensado para treinamentos de Segurança do Trabalho em geral: você informa a norma, a carga horária e o conteúdo do treinamento que ministrou.',
+    q: 'Como consigo o Gerador de Certificados?',
+    a: 'Fale com a ISSMA pelo WhatsApp para consultar a disponibilidade.',
   },
   {
     q: 'E se eu tiver dúvidas antes de comprar?',
-    a: 'É só chamar no WhatsApp. Respondemos pessoalmente e ajudamos você a escolher o que faz mais sentido.',
+    a: 'É só chamar no WhatsApp para saber qual material faz mais sentido para você.',
   },
 ];
 
 const Faq = () => (
-  <section id="faq" className="section bg-white">
+  <section id="faq" className="section bg-sand">
     <div className="container max-w-3xl">
       <Reveal className="text-center">
         <span className="eyebrow">Dúvidas frequentes</span>
         <h2 className="section-title mt-3">Perguntas e respostas</h2>
       </Reveal>
-      <div className="mt-10 divide-y divide-black/5 rounded-2xl border border-black/5 bg-sand/60">
+      <div className="mt-10 divide-y divide-black/5 rounded-2xl border border-black/5 bg-white">
         {faqs.map(({ q, a }) => (
           <details key={q} className="group px-5 py-4 sm:px-6">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-1 font-semibold [&::-webkit-details-marker]:hidden">

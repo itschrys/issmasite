@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, TrendingUp, Users, Target } from 'lucide-react';
+import { Briefcase, ShieldCheck, FolderOpen, Target } from 'lucide-react';
 import fotoIsmael from '../images/foto_ismael.jpg';
 import Reveal from './Reveal';
 
@@ -11,19 +11,19 @@ const About = () => {
       description: 'Atuação em projetos de SSMA em diversos setores industriais.',
     },
     {
-      icon: TrendingUp,
-      title: 'Resultados reais',
-      description: 'Implantação de programas de segurança que reduzem riscos de verdade.',
+      icon: ShieldCheck,
+      title: 'Prevenção aplicada à rotina',
+      description: 'Documentação técnica, programas e ferramentas para o dia a dia de SST.',
     },
     {
-      icon: Users,
-      title: 'Formação de profissionais',
-      description: 'Alunos capacitados com linguagem direta e aplicada à rotina.',
+      icon: FolderOpen,
+      title: 'Materiais prontos para usar',
+      description: 'Apresentações, planilhas e checklists para treinamentos e gestão.',
     },
     {
       icon: Target,
-      title: 'Foco em excelência',
-      description: 'Metodologia prática, orientada para o que o mercado exige.',
+      title: 'Consultoria especializada',
+      description: 'Orientação para profissionais e empresas, com linguagem direta.',
     },
   ];
 
@@ -34,27 +34,28 @@ const About = () => {
           <div className="absolute -left-3 -top-3 h-full w-full rounded-3xl border-2 border-brand-500/30" />
           <img
             src={fotoIsmael}
-            alt="Ismael Lins, especialista em SSMA"
+            alt="Ismael Lins, Técnico em Segurança do Trabalho e fundador da ISSMA"
             loading="lazy"
             className="relative aspect-[4/5] w-full rounded-3xl bg-white object-cover object-top shadow-xl"
           />
-          <div className="absolute -bottom-5 right-4 rounded-2xl bg-ink px-5 py-4 text-white shadow-xl">
+          <div className="absolute -bottom-5 right-4 max-w-[17rem] rounded-2xl bg-ink px-5 py-4 text-white shadow-xl">
             <p className="font-display text-lg font-bold">Ismael Lins</p>
-            <p className="text-sm text-brand-300">Especialista em SSMA</p>
+            <p className="text-sm text-brand-300">Técnico em Segurança do Trabalho e fundador da ISSMA</p>
           </div>
         </Reveal>
 
         <div>
           <Reveal>
-            <span className="eyebrow">Quem está por trás do ISSMA</span>
+            <span className="eyebrow">Quem está por trás da ISSMA</span>
             <h2 className="section-title mt-3">
-              Segurança do trabalho ensinada por quem vive o <span className="text-brand-500">dia a dia de campo</span>.
+              Materiais criados por quem vive o <span className="text-brand-500">dia a dia de campo</span>.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink/70">
-              O ISSMA nasceu para capacitar profissionais e organizações com conhecimento técnico de excelência em
-              Segurança, Saúde e Meio Ambiente. Através de cursos práticos, ferramentas e consultoria personalizada, a
-              missão é transformar ambientes de trabalho em espaços mais seguros, saudáveis e sustentáveis.
+              A ISSMA — Instruções em Segurança, Saúde e Meio Ambiente — nasceu para apoiar profissionais e organizações
+              com conhecimento técnico de qualidade. Com materiais práticos, ferramentas e consultoria personalizada, a
+              missão é contribuir para ambientes de trabalho mais seguros, saudáveis e sustentáveis.
             </p>
+            <p className="mt-3 font-semibold text-brand-700">ISSMA é de Salvador — Bahia.</p>
           </Reveal>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">

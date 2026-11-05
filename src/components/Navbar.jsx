@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { NAV_LINKS, HOTMART_CURSO_URL } from '../data/site';
-import { openExternal } from '../lib/links';
+import { Menu, X, FolderOpen } from 'lucide-react';
+import logo from '../images/logo_issma.webp';
+import { NAV_LINKS } from '../data/site';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <nav className="container flex h-16 items-center justify-between lg:h-20">
         <a href="#inicio" className="flex items-center gap-2.5 text-white" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand-500 text-lg font-black">+</span>
+          <img src={logo} alt="" className="h-11 w-11 rounded-full lg:h-14 lg:w-14" />
           <span className="font-display text-xl font-extrabold tracking-tight">ISSMA</span>
         </a>
 
@@ -41,13 +41,13 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => openExternal(HOTMART_CURSO_URL)}
+          <a
+            href="#materiais"
             className="hidden items-center gap-2 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-600 sm:inline-flex"
           >
-            <ShoppingCart className="h-4 w-4" />
-            Quero o curso
-          </button>
+            <FolderOpen className="h-4 w-4" />
+            Ver os kits
+          </a>
           <button
             onClick={() => setOpen((v) => !v)}
             className="grid h-10 w-10 place-items-center rounded-lg text-white hover:bg-white/10 lg:hidden"
@@ -74,16 +74,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button
-            onClick={() => {
-              setOpen(false);
-              openExternal(HOTMART_CURSO_URL);
-            }}
-            className="btn-primary mt-6 w-full"
-          >
-            <ShoppingCart className="h-5 w-5" />
-            Quero o curso
-          </button>
+          <a href="#materiais" onClick={() => setOpen(false)} className="btn-primary mt-6 w-full">
+            <FolderOpen className="h-5 w-5" />
+            Ver os kits
+          </a>
         </div>
       )}
     </header>

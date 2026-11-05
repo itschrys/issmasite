@@ -37,7 +37,7 @@ module.exports = {
 				},
 				ink: '#0A1A14',
 				sand: '#F4F6F3',
-				hazard: '#E8B92E',
+				hazard: '#F5AE1B',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

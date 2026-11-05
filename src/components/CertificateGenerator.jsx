@@ -1,31 +1,30 @@
 import React from 'react';
 import {
-  FileBadge, Users, Clock3, FileDown, ListChecks, PenLine, ShoppingCart, CheckCircle2,
+  FileBadge, Users, FileCheck2, FileDown, ListChecks, PenLine, MessageCircle, CheckCircle2,
 } from 'lucide-react';
 import Reveal from './Reveal';
-import PriceTag from './PriceTag';
-import { HOTMART_GERADOR_URL, PRECO_GERADOR } from '../data/site';
-import { openExternal } from '../lib/links';
+import logo from '../images/logo_issma.webp';
+import { whatsappLink } from '../data/site';
 
 const CertificateGenerator = () => {
   const features = [
-    { icon: Users, title: 'Vários participantes de uma vez', description: 'Cadastre a turma e gere todos os certificados em poucos cliques, sem digitar nome por nome.' },
-    { icon: ListChecks, title: 'Conteúdo programático da NR', description: 'Inclua carga horária, conteúdo ministrado e dados do treinamento, como pedem as normas.' },
-    { icon: PenLine, title: 'Instrutor e responsável técnico', description: 'Dados e assinaturas do instrutor e do responsável sempre no lugar certo.' },
-    { icon: FileDown, title: 'Pronto para imprimir ou enviar', description: 'Certificados padronizados e organizados, prontos para arquivar ou entregar.' },
+    { icon: Users, title: 'Vários participantes', description: 'Cadastre a turma e reduza a digitação repetida nome por nome.' },
+    { icon: ListChecks, title: 'Dados do treinamento', description: 'Campos para norma, data, carga horária e conteúdo ministrado.' },
+    { icon: PenLine, title: 'Instrutor e responsável', description: 'Espaço para os dados do instrutor e do responsável técnico.' },
+    { icon: FileDown, title: 'Modelo padronizado', description: 'Certificados com o mesmo padrão para imprimir, enviar e arquivar.' },
   ];
 
   const steps = [
-    { n: '01', title: 'Preencha o treinamento', text: 'Informe a NR, a data, a carga horária e o instrutor.' },
+    { n: '01', title: 'Preencha o treinamento', text: 'Informe a norma, a data, a carga horária e o instrutor.' },
     { n: '02', title: 'Adicione os participantes', text: 'Inclua a lista com os nomes da turma.' },
-    { n: '03', title: 'Gere os certificados', text: 'Todos prontos e padronizados, em minutos.' },
+    { n: '03', title: 'Confira e emita', text: 'O responsável pelo treinamento confere os dados e emite os certificados.' },
   ];
 
   const gains = [
-    'Economize horas de trabalho repetitivo a cada turma',
-    'Evite erros de digitação em nomes, datas e cargas horárias',
-    'Padronize a documentação para fiscalizações e auditorias',
-    'Passe uma imagem mais profissional para clientes e empresas',
+    'Menos trabalho repetitivo a cada turma',
+    'Dados do treinamento organizados em um só lugar',
+    'Documentação com aparência padronizada',
+    'Mais praticidade para técnicos, instrutores e empresas',
   ];
 
   return (
@@ -42,9 +41,9 @@ const CertificateGenerator = () => {
               Gerador de Certificados de <span className="text-brand-300">Treinamentos</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-white/70">
-              Chega de montar certificado por certificado no editor de texto. O Gerador de Certificados do ISSMA foi
-              criado para técnicos, instrutores e empresas que ministram treinamentos de Segurança do Trabalho e
-              precisam emitir certificados corretos, padronizados e com rapidez.
+              Facilita a emissão e a padronização de certificados, com conferência dos dados pelo responsável pelo
+              treinamento. Feito para quem ministra treinamentos de Segurança do Trabalho e quer ganhar tempo no
+              fechamento de cada turma.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -56,16 +55,15 @@ const CertificateGenerator = () => {
               ))}
             </ul>
 
-            <div className="mt-12 max-w-md">
-              <PriceTag price={PRECO_GERADOR} />
-            </div>
-
-            <div className="mt-6 flex max-w-md flex-col gap-3">
-              <button onClick={() => openExternal(HOTMART_GERADOR_URL)} className="btn-primary py-4 text-lg">
-                <ShoppingCart className="h-5 w-5" />
-                Quero o Gerador de Certificados
-              </button>
-            </div>
+            <a
+              href={whatsappLink('Olá! Gostaria de consultar a disponibilidade do Gerador de Certificados.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-10 w-full py-4 text-lg sm:w-auto"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Consultar disponibilidade
+            </a>
           </Reveal>
 
           {/* Mockup ilustrativo de certificado */}
@@ -74,8 +72,8 @@ const CertificateGenerator = () => {
             <div className="relative rotate-1 rounded-2xl bg-white p-2 text-ink shadow-2xl">
               <div className="rounded-xl border-2 border-brand-500/40 p-5 sm:p-8">
                 <div className="flex items-center justify-between">
-                  <span className="grid h-8 w-8 place-items-center rounded-md bg-brand-500 font-black text-white">+</span>
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-ink/50">Certificado</span>
+                  <img src={logo} alt="" loading="lazy" className="h-12 w-12 rounded-full" />
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-ink/50">Modelo ilustrativo</span>
                 </div>
                 <p className="mt-6 text-center font-display text-xl font-extrabold sm:text-2xl">Certificado de Treinamento</p>
                 <p className="mt-3 text-center text-xs text-ink/60 sm:text-sm">Certificamos que</p>
@@ -94,8 +92,8 @@ const CertificateGenerator = () => {
               </div>
             </div>
             <div className="absolute -bottom-5 -left-2 flex items-center gap-2 rounded-xl bg-ink px-4 py-3 text-sm shadow-xl sm:-left-6">
-              <Clock3 className="h-4 w-4 text-brand-300" />
-              Turma inteira em minutos
+              <FileCheck2 className="h-4 w-4 text-brand-300" />
+              Emissão padronizada
             </div>
           </Reveal>
         </div>

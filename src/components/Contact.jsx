@@ -17,7 +17,7 @@ const Contact = () => {
           <span className="eyebrow-dark">Contato</span>
           <h2 className="section-title mt-3">Precisa de consultoria em SSMA?</h2>
           <p className="mt-5 max-w-lg text-lg text-white/70">
-            Tire suas dúvidas sobre os cursos e o Gerador de Certificados, ou solicite uma consultoria personalizada
+            Tire suas dúvidas sobre os kits e o Gerador de Certificados, ou solicite uma consultoria personalizada
             para a sua empresa.
           </p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary mt-8 w-full sm:w-auto">
