@@ -63,9 +63,10 @@ export const PRODUCTS = [
       'Apresentação de treinamento: conscientização e boas práticas',
     ],
     capa: capaKitAvcb,
-    // Link curto da Hotmart: bloqueadores de anúncios podem esconder este botão.
-    // Troque pelo endereço final (o que aparece no navegador ao abrir o link).
-    url: 'https://go.hotmart.com/P107640783Q',
+    url: 'https://issma-sms.hotmart.host/kit-avcb-avaliacao-corpo-de-bombeiros-ca8f4f17-45f7-4a8e-b565-1d4110b4cf20',
+    de: 197,
+    por: 59.9,
+    garantiaDias: 7,
   },
   {
     id: 'kit-aprova',
