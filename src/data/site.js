@@ -63,7 +63,7 @@ export const PRODUCTS = [
       'Apresentação de treinamento: conscientização e boas práticas',
     ],
     capa: capaKitAvcb,
-    url: 'https://issma-sms.hotmart.host/kit-avcb-avaliacao-corpo-de-bombeiros-ca8f4f17-45f7-4a8e-b565-1d4110b4cf20',
+    url: 'https://pay.hotmart.com/P107640783Q?off=ue8feig7&hotfeature=51',
     de: 197,
     por: 59.9,
     garantiaDias: 7,
