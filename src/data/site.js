@@ -2,6 +2,7 @@
 import capaTudoNr01 from '../images/produtos/tudo_nr01.jpg';
 import capaGestaoSst from '../images/produtos/gestao_sst.jpg';
 import capaKitAprova from '../images/produtos/kit_aprova.jpg';
+import capaKitAvcb from '../images/produtos/kit_avcb.jpg';
 
 export const WHATSAPP_NUMBER = '5571987842165';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -54,9 +55,17 @@ export const PRODUCTS = [
   {
     id: 'kit-avcb',
     nome: 'Kit AVCB - Avaliação Bombeiro',
-    resumo: 'Kit da ISSMA voltado à avaliação de bombeiro.',
-    itens: [],
-    url: '', // 👉 cole aqui o link completo: https://issma-sms.hotmart.host/kit-avcb-avalia...
+    resumo: 'Kit digital para organizar as inspeções do AVCB e acompanhar os prazos.',
+    itens: [
+      'Checklist AVCB: edificação, sistemas de segurança e ações corretivas',
+      'Planilha de acompanhamento com situação, prazo e responsável',
+      'Modelo de relatório AVCB com registro fotográfico e plano de ação',
+      'Apresentação de treinamento: conscientização e boas práticas',
+    ],
+    capa: capaKitAvcb,
+    // Link curto da Hotmart: bloqueadores de anúncios podem esconder este botão.
+    // Troque pelo endereço final (o que aparece no navegador ao abrir o link).
+    url: 'https://go.hotmart.com/P107640783Q',
   },
   {
     id: 'kit-aprova',
