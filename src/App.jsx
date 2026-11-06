@@ -10,6 +10,7 @@ import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <CookieBanner />
     </>
   );
 }

@@ -7,11 +7,11 @@ import PriceTag from './PriceTag';
 import { PRODUCTS, ISSMA_INDICA_URL, whatsappLink } from '../data/site';
 
 const ProductCard = ({ product }) => {
-  const { nome, resumo, itens, aviso, capa, url, de, por, garantiaDias } = product;
+  const { id, nome, resumo, itens, aviso, capa, url, de, por, garantiaDias } = product;
   const href = url || whatsappLink(`Olá! Gostaria de consultar a disponibilidade do ${nome}.`);
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-3xl bg-ink text-white shadow-lg">
+    <article id={id} className="flex h-full flex-col overflow-hidden rounded-3xl bg-ink text-white shadow-lg">
       {capa ? (
         <img
           src={capa}
@@ -48,6 +48,8 @@ const ProductCard = ({ product }) => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            data-checkout-name={url ? nome : undefined}
+            data-checkout-value={url && por ? por : undefined}
             className="btn-primary mt-4 w-full text-center"
           >
             {url ? <ShoppingCart className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}

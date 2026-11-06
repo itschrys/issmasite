@@ -19,7 +19,12 @@ const Footer = () => (
           </li>
         ))}
       </ul>
-      <p className="text-sm text-white/40">© {new Date().getFullYear()} ISSMA. Todos os direitos reservados.</p>
+      <div className="text-sm text-white/40">
+        <p>© {new Date().getFullYear()} ISSMA. Todos os direitos reservados.</p>
+        <a href="/privacidade.html" className="mt-1 inline-block underline-offset-2 hover:text-white hover:underline">
+          Política de Privacidade
+        </a>
+      </div>
     </div>
   </footer>
 );

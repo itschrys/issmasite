@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0F1F3D" />
+<title>Política de Privacidade | ISSMA</title>
+<meta name="description" content="Como a ISSMA trata os dados de quem visita o site." />
+<link rel="canonical" href="https://issmasite.vercel.app/privacidade.html" />
+<style>
+  :root { --ink: #0F1F3D; --gold: #F5AE1B; --text: #24324d; --muted: #5b6780; --bg: #f6f8fc; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { background: var(--ink); color: #fff; padding: 20px 16px; }
+  header a { color: var(--gold); text-decoration: none; font-weight: 600; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { color: var(--ink); font-size: 1.9rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { color: var(--ink); font-size: 1.2rem; margin: 32px 0 8px; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 24px; }
+  ul { padding-left: 1.2rem; }
+  a { color: #1d4ed8; }
+  button { margin-top: 8px; padding: 10px 18px; border: 0; border-radius: 999px; background: var(--ink); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+  #status { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<header><a href="/">← Voltar para o site da ISSMA</a></header>
+<main>
+  <h1>Política de Privacidade</h1>
+  <p class="updated">Última atualização: novembro de 2026</p>
+
+  <p>Esta política explica como a <strong>ISSMA — Instruções em Segurança, Saúde e Meio Ambiente</strong>, de Salvador (BA), trata os dados de quem visita este site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).</p>
+
+  <h2>1. Quais dados coletamos</h2>
+  <ul>
+    <li><strong>Dados de navegação (cookies):</strong> se você aceitar os cookies, usamos o Pixel da Meta (Facebook e Instagram) e ferramentas do Google para registrar páginas visitadas, cliques nos botões de compra e de WhatsApp, tipo de dispositivo e origem da visita (por exemplo, um anúncio).</li>
+    <li><strong>Contato:</strong> quando você fala conosco pelo WhatsApp ou por e-mail, recebemos os dados que você mesmo enviar, como nome, telefone e mensagem.</li>
+  </ul>
+  <p>Este site não tem formulários de cadastro e não coleta dados de pagamento.</p>
+
+  <h2>2. Para que usamos</h2>
+  <ul>
+    <li>Entender quantas pessoas visitam o site e quais conteúdos interessam mais;</li>
+    <li>Medir o resultado dos nossos anúncios e mostrá-los a pessoas com interesse em Segurança do Trabalho;</li>
+    <li>Responder às suas dúvidas e solicitações.</li>
+  </ul>
+
+  <h2>3. Compras pela Hotmart</h2>
+  <p>As compras dos kits são feitas na plataforma <strong>Hotmart</strong>. Os dados informados no pagamento são tratados pela Hotmart, conforme a <a href="https://hotmart.com/pt-br/legal/privacidade" target="_blank" rel="noopener noreferrer">política de privacidade da Hotmart</a>. A ISSMA recebe da Hotmart apenas as informações necessárias para a entrega e o suporte do produto.</p>
+
+  <h2>4. Compartilhamento</h2>
+  <p>Não vendemos seus dados. Os dados de navegação são processados pela Meta Platforms e pelo Google, de acordo com as políticas dessas empresas, apenas para as finalidades acima.</p>
+
+  <h2>5. Cookies e como mudar sua escolha</h2>
+  <p>Os cookies de medição e anúncios só são ativados se você clicar em <strong>“Aceitar”</strong> no aviso do site. Você pode mudar de ideia quando quiser: o botão abaixo apaga a sua escolha, e o aviso aparece de novo na próxima visita. Você também pode apagar os cookies nas configurações do seu navegador.</p>
+  <button type="button" id="reset">Revogar ou alterar meu consentimento</button>
+  <p id="status" aria-live="polite"></p>
+
+  <h2>6. Seus direitos</h2>
+  <p>Pela LGPD, você pode pedir a confirmação de que tratamos seus dados, o acesso, a correção ou a exclusão deles, além de revogar o consentimento a qualquer momento.</p>
+
+  <h2>7. Contato</h2>
+  <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, fale com a ISSMA:</p>
+  <ul>
+    <li>E-mail: <a href="mailto:issma.sms@gmail.com">issma.sms@gmail.com</a></li>
+    <li>WhatsApp: <a href="https://wa.me/5571987842165" target="_blank" rel="noopener noreferrer">+55 (71) 98784-2165</a></li>
+  </ul>
+</main>
+<script>
+  document.getElementById('reset').addEventListener('click', function () {
+    var status = document.getElementById('status');
+    try {
+      localStorage.removeItem('issma-consent');
+      status.textContent = 'Pronto. O aviso de cookies vai aparecer de novo quando você voltar ao site.';
+    } catch (e) {
+      status.textContent = 'Não foi possível alterar. Apague os cookies nas configurações do navegador.';
+    }
+  });
+</script>
+</body>
+</html>

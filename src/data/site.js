@@ -10,6 +10,16 @@ export const whatsappLink = (message) => `${WHATSAPP_URL}?text=${encodeURICompon
 export const EMAIL = 'issma.sms@gmail.com';
 export const PHONE_LABEL = '+55 (71) 98784-2165';
 
+export const SITE_URL = 'https://issmasite.vercel.app';
+
+// 👉 Rastreamento para tráfego pago. Cole os IDs entre as aspas; vazio = desligado.
+// Os códigos só carregam depois que o visitante aceita os cookies (LGPD).
+// A verificação de domínio da Meta fica no index.html (o robô do Facebook não roda JavaScript).
+export const TRACKING = {
+  metaPixelId: '', // Pixel da Meta (Instagram/Facebook). Ex.: '123456789012345'
+  googleTagId: '', // Google Analytics 4 (G-XXXXXXX) ou Google Ads (AW-XXXXXXX)
+};
+
 export const SOCIAL = {
   linkedin: 'https://www.linkedin.com/in/ismael-lins-34408b188',
   instagram: 'https://www.instagram.com/issma.sms?igsh=cjYwMTlncWUwNDN3',
