@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar';
 import Hero from './components/Body';
@@ -13,6 +13,14 @@ import WhatsAppButton from './components/WhatsAppButton';
 import CookieBanner from './components/CookieBanner';
 
 function App() {
+  // Links de anúncio como /#kit-avcb: o navegador procura o # antes de a página existir.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return undefined;
+    const timer = setTimeout(() => document.getElementById(id)?.scrollIntoView(), 150);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
